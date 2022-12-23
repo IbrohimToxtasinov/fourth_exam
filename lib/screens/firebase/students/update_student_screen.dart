@@ -1,5 +1,5 @@
 import 'package:fifth_exam/data/models/students/students_model.dart';
-import 'package:fifth_exam/data/services/file_uploader/file_uploader.dart';
+import 'package:fifth_exam/data/services/uploader_service/file_uploader.dart';
 import 'package:fifth_exam/view_models/students_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';

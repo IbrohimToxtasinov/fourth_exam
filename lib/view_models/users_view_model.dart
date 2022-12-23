@@ -10,13 +10,13 @@ class UserViewModel extends ChangeNotifier {
   }
 
   late UserRepository _userRepository;
-  List<UserModel> userList = [];
+  List<UserModel> user = [];
   String errorForUI = "";
 
   fetchAllUsers() async {
     MyResponse response = await _userRepository.getAllUsers();
     if (response.error.isEmpty) {
-      userList = response.data as List<UserModel>;
+      user = response.data as List<UserModel>;
     } else {
       errorForUI = response.error;
     }

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fifth_exam/data/repositories/students_repository.dart';
-import 'package:fifth_exam/screens/dio/user_screen.dart';
+import 'package:fifth_exam/screens/main_page.dart';
 import 'package:fifth_exam/view_models/students_view_model.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const UsersScreen(),
+      home: const MainPage(),
     );
   }
 }

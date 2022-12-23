@@ -4,14 +4,14 @@ import 'package:fifth_exam/view_models/users_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class UsersScreen extends StatelessWidget {
-  const UsersScreen({super.key});
+class AllUsersScreen extends StatelessWidget {
+  const AllUsersScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Users"),
+          title: const Text("Users Screen"),
         ),
         body: ChangeNotifierProvider(
             create: (context) => UserViewModel(
@@ -23,24 +23,28 @@ class UsersScreen extends StatelessWidget {
                   child: Text(user.errorForUI),
                 );
               }
-              if (user.userList.isNotEmpty) {
+              if (user.user.isNotEmpty) {
                 return ListView.builder(
-                  itemCount: user.userList.length,
+                  itemCount: user.user.length,
                   itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image:
-                                  NetworkImage(user.userList[index].avatarUrl),
-                            )),
+                    return Card(
+                      shadowColor: Colors.black,
+                      elevation: 2,
+                      child: ListTile(
+                        leading: Container(
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image:
+                                    NetworkImage(user.user[index].avatarUrl),
+                              )),
+                        ),
+                        title: Text(user.user[index].name),
+                        subtitle: Text(user.user[index].username),
                       ),
-                      title: Text(user.userList[index].name),
-                      subtitle: Text(user.userList[index].username),
                     );
                   },
                 );

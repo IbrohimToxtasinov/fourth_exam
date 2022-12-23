@@ -16,8 +16,8 @@ class StudentRepository {
         "student_id": newStudent.id,
       });
       MyUtils.getMyToast(message: "Talaba muvaffaqiyatli qo'shiladi!");
-    } on FirebaseException catch (er) {
-      MyUtils.getMyToast(message: er.message.toString());
+    } on FirebaseException catch (error) {
+      MyUtils.getMyToast(message: error.message.toString());
     }
   }
 

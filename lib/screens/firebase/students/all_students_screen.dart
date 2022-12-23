@@ -30,55 +30,58 @@ class _AllStudentsScreenState extends State<AllStudentsScreen> {
         ],
       ),
       body: Consumer<StudentsViewModel>(
-        builder: ((context, categoryViewModel, child) {
+        builder: ((context, studentViewModel, child) {
           return ListView(
-            children: List.generate(categoryViewModel.students.length, (index) {
-              StudentModel students = categoryViewModel.students[index];
-              return ListTile(
-                title: Row(
-                  children: [
-                    Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                              image: NetworkImage(students.imageUrl),
-                              fit: BoxFit.cover)),
-                    ),
-                    const SizedBox(width: 20),
-                    Text(students.studentName),
-                  ],
-                ),
-                trailing: SizedBox(
-                  width: 100,
-                  child: Row(
+            children: List.generate(studentViewModel.students.length, (index) {
+              StudentModel students = studentViewModel.students[index];
+              return Card(
+                elevation: 3,
+                child: ListTile(
+                  title: Row(
                     children: [
-                      IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => UpdateStudentsScreen(
-                                  studentModel: students,
-                                ),
-                              ),
-                            );
-                          },
-                          icon: const Icon(Icons.edit)),
-                      IconButton(
-                          onPressed: () {
-                            Provider.of<StudentsViewModel>(context,
-                                    listen: false)
-                                .deleteStudent(students.studentId);
-
-                            print("DELETING ID:${students.studentId}");
-                          },
-                          icon: const Icon(
-                            Icons.delete,
-                            color: Colors.red,
-                          )),
+                      Container(
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                                image: NetworkImage(students.imageUrl),
+                                fit: BoxFit.cover)),
+                      ),
+                      const SizedBox(width: 20),
+                      Text(students.studentName),
                     ],
+                  ),
+                  trailing: SizedBox(
+                    width: 100,
+                    child: Row(
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => UpdateStudentsScreen(
+                                    studentModel: students,
+                                  ),
+                                ),
+                              );
+                            },
+                            icon: const Icon(Icons.edit)),
+                        IconButton(
+                            onPressed: () {
+                              Provider.of<StudentsViewModel>(context,
+                                      listen: false)
+                                  .deleteStudent(students.studentId);
+              
+                              print("DELETING ID:${students.studentId}");
+                            },
+                            icon: const Icon(
+                              Icons.delete,
+                              color: Colors.red,
+                            )),
+                      ],
+                    ),
                   ),
                 ),
               );
