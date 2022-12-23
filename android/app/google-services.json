@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1017896122107",
+    "project_id": "fourth-exam-72ea7",
+    "storage_bucket": "fourth-exam-72ea7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017896122107:android:9bc8605a23c5159ccce25e",
+        "android_client_info": {
+          "package_name": "com.ibrohim.fifth_exam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017896122107-dlpgh7u1qr2b0708g3gr52tai3nnjjv6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibrohim.fifth_exam",
+            "certificate_hash": "dd33fb103562e75e0332b9f5bdb6b4a0953d8a26"
+          }
+        },
+        {
+          "client_id": "1017896122107-c0ad2ffvpakt4317l3kicf5q5o98rd4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCLmWMzHIeW1kaUFI9r-V4HcJVC1I2tWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017896122107-c0ad2ffvpakt4317l3kicf5q5o98rd4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
