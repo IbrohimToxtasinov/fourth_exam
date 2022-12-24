@@ -19,6 +19,7 @@ class _AnimationCircularBarState extends State<AnimationCircularBar> {
     Future.delayed(const Duration(seconds: 2))
         .then((value) => colorsGalochka = Colors.green);
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title:
             isChanged ? const Text("Animations") : const Text("Custom Paint"),
@@ -79,9 +80,6 @@ class _AnimationCircularBarState extends State<AnimationCircularBar> {
                         size: const Size(500, 500),
                         painter: MyPainter(),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 50,
                     ),
                   ],
                 ),

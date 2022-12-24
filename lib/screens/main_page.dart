@@ -1,4 +1,4 @@
-import 'package:fifth_exam/screens/animations/animation_circular_bar.dart';
+import 'package:fifth_exam/screens/animations%20and%20custom_paint/animation_circular_bar%20and%20custom_panit.dart';
 import 'package:fifth_exam/screens/dio/user_screen.dart';
 import 'package:fifth_exam/screens/firebase/students/all_students_screen.dart';
 import 'package:flutter/material.dart';
