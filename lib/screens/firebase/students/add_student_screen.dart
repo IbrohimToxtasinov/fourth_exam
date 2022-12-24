@@ -31,7 +31,7 @@ class _AddStudentsScreenState extends State<AddStudentsScreen> {
             children: [
               TextFormField(
                 controller: nameController,
-                maxLength: 20,
+                maxLength: 15,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   focusedBorder: OutlineInputBorder(),
