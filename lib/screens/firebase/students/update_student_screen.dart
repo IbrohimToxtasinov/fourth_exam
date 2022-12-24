@@ -41,7 +41,7 @@ class _UpdateStudentsScreenState extends State<UpdateStudentsScreen> {
                 const SizedBox(height: 20),
                 TextFormField(
                   controller: nameController,
-                  maxLength: 20,
+                  maxLength: 15,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(),
