@@ -13,7 +13,7 @@ class StudentRepository {
       var newStudent =
           await _firestore.collection("students").add(studentModel.toJson());
       await _firestore.collection("students").doc(newStudent.id).update({
-        "student_id": newStudent.id,
+        "studentId": newStudent.id,
       });
       MyUtils.getMyToast(message: "Talaba muvaffaqiyatli qo'shiladi!");
     } on FirebaseException catch (error) {

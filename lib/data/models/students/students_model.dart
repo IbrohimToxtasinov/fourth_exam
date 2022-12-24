@@ -11,17 +11,17 @@ class StudentModel {
 
   factory StudentModel.fromJson(Map<String, dynamic> json) {
     return StudentModel(
-      studentId: json['student_id'] as String? ?? "",
-      studentName: json['student_name'] as String? ?? "",
-      imageUrl: json['image_url'] as String? ?? "",
+      studentId: json['studentId'] as String? ?? "",
+      studentName: json['studentName'] as String? ?? "",
+      imageUrl: json['imageUrl'] as String? ?? "",
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'student_id': studentId,
-      'student_name': studentName,
-      'image_url': imageUrl,
+      'studentId': studentId,
+      'studentName': studentName,
+      'imageUrl': imageUrl,
     };
   }
 }
